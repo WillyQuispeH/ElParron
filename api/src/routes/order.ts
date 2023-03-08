@@ -3,6 +3,6 @@ import * as OrderController from "../controllers/Order";
 
 const OrderRouter = Router();
 
-OrderRouter.get("/getByOrder/:id", OrderController.getByOrder);
+OrderRouter.get("/getById/:id", OrderController.getById);
 
 export default OrderRouter
