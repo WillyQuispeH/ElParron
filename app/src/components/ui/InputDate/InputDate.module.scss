@@ -1,0 +1,48 @@
+.InputDate {
+  box-sizing: border-box;
+  position: relative;
+  height: 50px;
+  background: #ffffff;
+
+  &::after {
+    position: absolute;
+    content: url(/icons/calendar.svg);
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    height: 47px;
+    width: 30px;
+    font-size: 25px;
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  label {
+    position: absolute;
+    top: 3px;
+    left: 15px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  input {
+    width: 100%;
+    height: 50px;
+    padding-left: 15px;
+    padding-top: 20px;
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #959595;
+    border-bottom: 3px solid #959595;
+    cursor: pointer;
+    
+    &:focus{
+      background-color: #ededed;
+    }
+  }
+}

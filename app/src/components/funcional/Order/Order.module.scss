@@ -1,0 +1,27 @@
+.ButtonSideBar {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.5s;
+  border-radius: 3px;
+  cursor: pointer;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #959595;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+  }
+}
+
+.ButtonSideBar:hover {
+  background-color: black;
+}
+
+.ButtonSideBar:hover span {
+  color: white;
+}

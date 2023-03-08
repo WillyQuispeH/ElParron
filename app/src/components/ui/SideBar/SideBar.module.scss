@@ -1,0 +1,42 @@
+.sideBar {
+    transition: all 0.4s;
+    left: -250px;
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background: #474436ed;
+    margin-top: 100px;
+    overflow: auto;
+    z-index: 20;
+
+    h1 {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: #282517;
+        color: white;
+        font-size: 20px;
+        font-weight: 300;
+        height: 40px;
+        padding-left: 20px;
+    }
+
+    ul {
+        li {
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            color: #959595;
+            background-color: #474436;
+            font-size: 18px;
+            font-weight: 300;
+            height: 40px;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                background-color: black;
+            }
+        }
+    }
+}
