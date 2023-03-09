@@ -1,7 +1,15 @@
-const getByEmail: any = async (email: string) => {
+import pool from "../util/database";
 
-  return "Este es el Email del usuario: " + email;
-  
+const getByRut: any = async (rut: string) => {
+  try {
+    const result = await pool.query(
+      "SELECT id, rut, name, paternallastname, maternallastname, address, district, email FROM app.person WHERE rut = $1",
+      [rut]
+    );
+    return result.rows[0];
+  } catch (e) {
+    return {};
+  }
 };
 
-export { getByEmail };
+export { getByRut };
