@@ -17,6 +17,8 @@ class App {
   routes() {
     this.server.use("/api/user", routes.UserRouter);
     this.server.use("/api/order", routes.OrderRouter);
+    this.server.use("/api/person", routes.PersonRouter)
   }
 }
+
 export default new App().server;

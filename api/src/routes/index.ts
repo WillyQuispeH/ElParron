@@ -1,3 +1,4 @@
 import UserRouter from "./user";
 import OrderRouter from "./order";
-export{UserRouter, OrderRouter};
+import PersonRouter from "./person";
+export{UserRouter, OrderRouter, PersonRouter};

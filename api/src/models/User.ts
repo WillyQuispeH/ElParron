@@ -1,17 +1,13 @@
 import pool from "../util/database";
 
 const getByRut: any = async (rut: string) => {
-  return "Este es el Rut Que consultaste: " + rut;
+  return "Este es el rut que consultaste: " + rut;
 };
 
-const getByName: any = async (name: string) => {
-  return "Este es el Nombre Que consultaste: " + name;
-};
-
-const getByEmail: any = async (email: string) => {
+const getByEmail: any = async (email: string = "ejemplo@abad.cl") => {
   try {
     const result = await pool.query(
-      "SELECT id, email, password FROM app.user WHERE email = $1",
+      "SELECT id, rut, name, paternallastname, maternallastname,email. phone, address,district FROM app.person WHERE email = $1",
       [email]
     );
     return result.rows[0];
@@ -20,4 +16,6 @@ const getByEmail: any = async (email: string) => {
   }
 };
 
-export { getByRut, getByName, getByEmail };
+
+
+export { getByRut, getByEmail };
