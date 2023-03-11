@@ -3,7 +3,7 @@ import * as UserController from "../controllers/User";
 
 const UserRouter = Router();
 
-UserRouter.get("/getByRut/:rut", UserController.getByRut);
-UserRouter.get("/getByEmail/:email", UserController.getByEmail);
+UserRouter.get("/getAll", UserController.getAll);
+UserRouter.post("/create", UserController.create);
 
 export default UserRouter;

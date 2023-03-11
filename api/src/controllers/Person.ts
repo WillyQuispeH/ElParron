@@ -18,8 +18,8 @@ const getByRut = async (req:any, res:any) =>{
     res.status(200).json({ sucess:true, data: result , error:false });
 };
 
-const getByAll = async(req:any, res:any) =>{
-    const result = await PersonModel.getByAll();
+const getAll = async(req:any, res:any) =>{
+    const result = await PersonModel.getAll();
     res.status(200).json({sucess:true, data: result, error:false})
 };
 
@@ -42,4 +42,4 @@ const deleteById = async(req:any, res:any) =>{
     res.status(200).json({sucess:true, data: result, error:false})
 };
 
-  export {getByEmail, getById, getByRut, getByAll, create, update, deleteById}
+  export {getByEmail, getById, getByRut, getAll, create, update, deleteById}

@@ -7,7 +7,7 @@ const PersonRouter = Router();
 PersonRouter.get("/getByEmail/:email" , PersonController.getByEmail);
 PersonRouter.get("/getByRut/:rut" , PersonController.getByRut);
 PersonRouter.get("/getById/:id" , PersonController.getById);
-PersonRouter.get("/getByAll" , PersonController.getByAll);
+PersonRouter.get("/getAll" , PersonController.getAll);
 PersonRouter.post("/create", PersonController.create);
 PersonRouter.put("/update/:id", PersonController.update);
 PersonRouter.delete("/deleteById/:id", PersonController.deleteById);

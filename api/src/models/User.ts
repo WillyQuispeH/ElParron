@@ -1,21 +1,26 @@
 import pool from "../util/database";
 
-const getByRut: any = async (rut: string) => {
-  return "Este es el rut que consultaste: " + rut;
-};
-
-const getByEmail: any = async (email: string = "ejemplo@abad.cl") => {
+const getAll: any = async () => {
   try {
     const result = await pool.query(
-      "SELECT id, rut, name, paternallastname, maternallastname,email. phone, address,district FROM app.person WHERE email = $1",
-      [email]
+      "SELECT id, person_id, password FROM app.user"
     );
-    return result.rows[0];
+    return result.rows;
   } catch (e) {
-    return {};
+    return { e };
   }
 };
 
+const create: any = async (person_id: string, password: string) => {
+  try {
+    const result = await pool.query(
+      "INSERT INTO app.user (person_id, password) VALUES ($1, $2) RETURNING * ;",
+      [person_id, password]
+    );
+    return result.rows[0];
+  } catch (e) {
+    return { e };
+  }
+};
 
-
-export { getByRut, getByEmail };
+export { getAll, create };
