@@ -1,0 +1,23 @@
+msc{
+  userRoute [label=" User route"],
+  userController [label="User Controller"],
+  personModel [label="Person Model"],
+  bcrypt [label = "bcrypt"],
+  userModel [label="User Model"],
+  database [label="Database"];
+
+  userRoute >> userController [label="validate"];
+  userController >>  personModel [label = " getByEmail"];
+  personModel >> database [label = "SELECT"]; 
+  database >> database [label = "SELECT person"];
+  database >> personModel [label = "result Rows"];
+  personModel >> userController [label = "resultPerson.id"];
+  userController >> userModel [label = "validate"];
+  userModel >> database [label = "SELECT"];
+  database >> database [label = "SELECT user"];
+  database >> userModel [label = "result Rows"];
+  userModel >> bcrypt [label = "compare"];
+  bcrypt >> userModel [label = "hash"];
+  userModel >> userController [label = "result"];
+  userController >> userRoute [label = "Data: result"];
+}

@@ -1,0 +1,20 @@
+msc {
+  userRoute [label=" User route"],
+  userController [label="User Controller"],
+  personModel [label="Person Model"],
+  userModel [label="User Model"],
+  database [label="Database"];
+
+  userRoute >>userController [label="create"];
+  userController >> personModel [label="create"];
+  userModel >> database[label="INSERT"];
+  database >> database [label="INSERT user"];
+  database >> personModel [label="person row"];
+  personModel >> userController [label="resultPerson"];
+  userController >> userModel [label="resultPerson.id, password"];
+  userModel >> database [label="INSERT"];
+  database >> database [label="INSERT user"];
+  database >> userModel [label="user row"];
+  userModel >> userController [label="result"];
+  userController >> userRoute [label="data:result"];
+}
