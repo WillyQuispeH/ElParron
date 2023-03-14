@@ -1,6 +1,7 @@
 import bcrypt from "bcrypt";
 
 import pool from "../util/database";
+import { hashPassword, passwordCompare } from "../util/password";
 
 const getAll: any = async () => {
   try {
@@ -13,9 +14,12 @@ const getAll: any = async () => {
 
 const create: any = async (person_id: string, password: string) => {
   try {
+    const hash = await hashPassword(password);
     const result = await pool.query(
-      "INSERT INTO app.user (person_id, hash) VALUES ($1, $2) RETURNING * ;",
-      [person_id, password]
+      `INSERT INTO app.user (person_id, hash)
+        VALUES ($1, $2)
+          RETURNING * ;`,
+      [person_id, hash]
     );
     return result.rows[0];
   } catch (e) {
@@ -24,14 +28,12 @@ const create: any = async (person_id: string, password: string) => {
 };
 
 const assignPassword: any = async (id: string, password: string) => {
-  const salt = 10;
-  const hash = await bcrypt.hash(password, salt);
-
   try {
+    const hash = await hashPassword(password);
     const result = await pool.query(
       `UPDATE app.user
         SET hash=$2
-          WHERE id = $1
+          WHERE person_id = $1
             RETURNING *;`,
       [id, hash]
     );
@@ -44,13 +46,13 @@ const assignPassword: any = async (id: string, password: string) => {
 const validate: any = async (id: string, password: string) => {
   try {
     const result = await pool.query(
-      `SELECT hash
+      `SELECT id, person_id, hash
         FROM app.user
           WHERE person_id = $1`,
       [id]
     );
-    const hash = await bcrypt.compare(password, result.rows[0].hash);
-    return hash;
+    const isValid = await passwordCompare(password, result.rows[0].hash);
+    return isValid;
   } catch (e) {
     return { e };
   }

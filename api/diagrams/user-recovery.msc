@@ -2,26 +2,31 @@ msc{
   userRoute [label=" User route"],
   userController [label="User Controller"],
   personModel [label="Person Model"],
-  bcrypt [label = "bcrypt"],
   userModel [label="User Model"],
+  util [label = "Util"],
   database [label="Database"];
 
-  userRoute >> userController [label = "recovery"];
+  userRoute >> userController [label = "recoveryPassword"];
   userController >> personModel [label = "getByEmail/:email"];
   personModel >> database [ label = "SELECT"];
   database >> database [label = "SELECT person"];
-  database >> personModel [label = "resultRows"];
-  personModel >> userController [label = "result"];
-  userController >> userRoute [label = "Data: Result"];
-userRoute >> userController [label = "assignPassword"];
+  database >> personModel [label = "person"];
+  personModel >> userController [label = "person"];
+  userController >> util [label = "generateRandomPassword"];
+  util >> util [label = "generateRandom(password)"];
+  util >> userController [label = "newPassword"];
   userController >> userModel [label = "assignPassword"];
-  userModel >> bcrypt [label = "hash"];
-  bcrypt >> userModel [ label = "hash"];
+  userModel >> util [label = "hashPassword(newPassword)"];
+  util >> util [ label = "HASH"];
+  util >> userModel [label = "hash"];
   userModel >> database [label = "UPDATE"];
   database >> database [label = "UPDATE user"];
-  database >> userModel [label = "resultRows"];
-  userModel >> userController [label = "result"];
-  userController >> userRoute [label = "Data: result"];
+  database >> userModel [label = "user"];
+  userModel >> userController [label = "user"];
+  userController >> util [label = "emailSender(person , newPassword)"];
+  util >> util [label = "emailSent"];
+  util >> userController [label = "emailSent"];
+  userController >> userRoute [label = "emailSent"];
 
 
 }

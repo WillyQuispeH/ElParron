@@ -1,6 +1,9 @@
 import * as UserModel from "../models/User";
 import * as PersonModel from "../models/Person";
 
+import { generatePassword } from "../util/password";
+import { emailSender } from "../util/email";
+
 const getAll = async (req: any, res: any) => {
   const result = await UserModel.getAll();
   res.status(200).json({ sucess: true, data: result, error: false });
@@ -28,8 +31,8 @@ const create = async (req: any, res: any) => {
     address,
     district
   );
-  const result = await UserModel.create(resultPerson.id, password);
-  res.status(200).json({ sucess: true, data: result, error: false });
+  const resultCreate = await UserModel.create(resultPerson.id, password);
+  res.status(200).json({ sucess: true, data: resultCreate, error: false });
 };
 
 const assignPassword = async (req: any, res: any) => {
@@ -42,8 +45,25 @@ const assignPassword = async (req: any, res: any) => {
 const validate = async (req: any, res: any) => {
   const { email, password } = req.body;
   const resultPerson = await PersonModel.getByEmail(email);
-  const result = await UserModel.validate(resultPerson.id, password);
-  res.status(200).json({ sucess: true, data: result, error: false });
+  if (!resultPerson) {
+    res.status(200).json({ sucess: true, data: false, error: false });
+    return;
+  }
+  const isValid = await UserModel.validate(resultPerson.id, password);
+  res.status(200).json({ sucess: true, data: isValid, error: false });
 };
 
-export { getAll, create, assignPassword, validate };
+const recoveryPassword = async (req: any, res: any) => {
+  const { email } = req.body;
+  const resultPerson = await PersonModel.getByEmail(email);
+  if (!resultPerson) {
+    res.status(200).json({ sucess: true, data: false, error: false });
+    return;
+  }
+  const newPassword = generatePassword();
+  const resulAssingPassword = await UserModel.assignPassword(resultPerson.id, newPassword);
+  const emailSent = emailSender(resultPerson, newPassword);
+  res.status(200).json({ sucess: true, data:emailSent, error: false });
+};
+
+export { getAll, create, assignPassword, validate, recoveryPassword };

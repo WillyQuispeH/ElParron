@@ -3,18 +3,25 @@ msc {
   userController [label="User Controller"],
   personModel [label="Person Model"],
   userModel [label="User Model"],
+  util [label="Util"],
   database [label="Database"];
 
   userRoute >>userController [label="create"];
-  userController >> personModel [label="create"];
-  userModel >> database[label="INSERT"];
-  database >> database [label="INSERT user"];
-  database >> personModel [label="person row"];
-  personModel >> userController [label="resultPerson"];
-  userController >> userModel [label="resultPerson.id, password"];
-  userModel >> database [label="INSERT"];
-  database >> database [label="INSERT user"];
-  database >> userModel [label="user row"];
-  userModel >> userController [label="result"];
-  userController >> userRoute [label="data:result"];
+  userController >> personModel [label="create(...)"];
+  personModel >> database [label = "INSERT INTO(...)"];
+  database >> database [label = "INSERT INTO person"];
+  database >> personModel [label = "person"];
+  personModel >> userController [label = "person"];
+  userController >> userModel [label = "create(person.id, password)"];
+  userModel >> util [label = "hashPassword(password)"];
+  util >> util [label = "HASH"];
+  util >> userModel [label = "hash"];
+  userModel >> database [label = "INSERT INTO(person_id,hash)"];
+  database >> database [label = "INSERT INTO user"];
+  database >> userModel [label = "user"];
+  userModel >> userController [label = "user"];
+  userController >> userRoute [label = "user"];
+
+
+
 }
