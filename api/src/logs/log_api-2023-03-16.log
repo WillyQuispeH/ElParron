@@ -1,0 +1,50 @@
+{"level":"error","message":{"error":"column \"ids\" does not exist","model":"person/create"},"timestamp":"2023-03-15 18:36:48"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/user/getAll"},"timestamp":"2023-03-15 18:55:34"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/user/getAll"},"timestamp":"2023-03-15 18:55:52"}
+{"level":"error","message":{"error":"column \"ids\" does not exist","model":"person/create"},"timestamp":"2023-03-15 18:55:53"}
+{"level":"info","message":{"body":{"address":"Santiago","district":"San Miguel","email":"Abad@gmail.com","maternallastname":"Abad","name":"Jorge","password":"willy","paternallastname":"Willy","phone":"+569 4988 5135","rut":"95790234-8"},"method":"POST","params":"","query":"","url":"/api/user/create"},"timestamp":"2023-03-15 18:56:31"}
+{"level":"info","message":{"body":{"address":"Santiago","district":"San Miguel","email":"Abad@gmail.com","maternallastname":"Huamani","name":"Abad","password":"willy","paternallastname":"Quispe","phone":"+569 4988 5135","rut":"95790234-8"},"method":"POST","params":"","query":"","url":"/api/user/create"},"timestamp":"2023-03-15 19:49:23"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/Abad@gmail.com"},"timestamp":"2023-03-15 19:49:53"}
+{"level":"info","message":{"body":{"email":"Abad@gmail.com","password":"willy"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-15 19:50:20"}
+{"level":"info","message":{"body":{"email":"Abad@gmail.com","password":"willyx"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-15 19:50:24"}
+{"level":"info","message":{"body":{"address":"Santiago","district":"San Miguel","email":"Abad@gmail.com","maternallastname":"Huamani","name":"Abad","paternallastname":"Quispe","phone":"+569 4988 5135","rut":"95790234-8"},"method":"POST","params":"","query":"","url":"/api/person/create"},"timestamp":"2023-03-15 19:50:58"}
+{"level":"info","message":{"body":{"email":"Abad@gmail.com"},"method":"POST","params":"","query":"","url":"/api/user/recoveryPassword"},"timestamp":"2023-03-15 19:51:32"}
+{"level":"info","message":{"body":{"email":"Abad@gmail.com"},"method":"POST","params":"","query":"","url":"/api/user/recoveryPassword"},"timestamp":"2023-03-15 19:53:47"}
+{"level":"info","message":{"body":{"email":"Abad@gmail.com","password":"willy"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-15 19:54:23"}
+{"level":"info","message":{"body":{"email":"Abad@gmail.com","password":"lmnopqr"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-15 19:54:28"}
+{"level":"info","message":{"body":{"address":"Santiago","district":"San Miguel","email":"willypruebas6@gmail.com","maternallastname":"Huamani","name":"Abad","password":"willy","paternallastname":"Quispe","phone":"+569 4988 5135","rut":"95790234-8"},"method":"POST","params":"","query":"","url":"/api/user/create"},"timestamp":"2023-03-15 19:55:09"}
+{"level":"info","message":{"body":{"email":"willypruebas"},"method":"POST","params":"","query":"","url":"/api/user/recoveryPassword"},"timestamp":"2023-03-15 19:55:29"}
+{"level":"info","message":{"body":{"email":"willypruebas6@gmail.com"},"method":"POST","params":"","query":"","url":"/api/user/recoveryPassword"},"timestamp":"2023-03-15 19:58:02"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getAll"},"timestamp":"2023-03-15 20:01:51"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getById/70b1d6ad-2194-4ae2-b0c2-da67c8a1d527"},"timestamp":"2023-03-15 20:01:59"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getById/70b1d6ad-2194-4ae2-b0c2-da67c8a1d528"},"timestamp":"2023-03-15 20:02:04"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getById/70b1d6ad-2194-4ae2-b0c2-da67c8a1d528"},"timestamp":"2023-03-15 20:02:33"}
+{"level":"info","message":{"body":{"email":"willyprueba6@gmail.com"},"method":"POST","params":"","query":"","url":"/api/user/recoveryPassword"},"timestamp":"2023-03-15 20:04:01"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/willypruebas6@gmail.com"},"timestamp":"2023-03-15 20:05:13"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/willypruebas6@gmail.co"},"timestamp":"2023-03-15 20:05:19"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/willypruebas6@gmail.co"},"timestamp":"2023-03-15 20:06:08"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/willypruebas6@gmail.co"},"timestamp":"2023-03-15 20:07:04"}
+{"level":"error","message":{"error":"syntax error at or near \"RETURNING\"","model":"person/getByEmail"},"timestamp":"2023-03-15 20:07:04"}
+{"level":"info","message":{"body":{"email":"willyprueba6@gmail.com"},"method":"POST","params":"","query":"","url":"/api/user/recoveryPassword"},"timestamp":"2023-03-15 20:07:44"}
+{"level":"error","message":{"error":"syntax error at or near \"RETURNING\"","model":"user/getByEmail"},"timestamp":"2023-03-15 20:07:44"}
+{"level":"info","message":{"body":{"email":"willypruebas6@gmail.com"},"method":"POST","params":"","query":"","url":"/api/user/recoveryPassword"},"timestamp":"2023-03-15 20:08:12"}
+{"level":"error","message":{"error":"syntax error at or near \"RETURNING\"","model":"user/getByEmail"},"timestamp":"2023-03-15 20:08:13"}
+{"level":"info","message":{"body":{"email":"willypruebas6@gmail.com"},"method":"POST","params":"","query":"","url":"/api/user/recoveryPassword"},"timestamp":"2023-03-15 20:08:57"}
+{"level":"info","message":{"body":{"email":"willyprueba6@gmail.com"},"method":"POST","params":"","query":"","url":"/api/user/recoveryPassword"},"timestamp":"2023-03-15 20:12:00"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/willypruebas6@gmail.co"},"timestamp":"2023-03-15 20:14:07"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/willypruebas6@gmail.co"},"timestamp":"2023-03-15 20:15:08"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/willypruebas6@gmail.co"},"timestamp":"2023-03-15 20:16:00"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/willypruebas6@gmail.co"},"timestamp":"2023-03-15 20:16:55"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/willypruebas6@gmail.co"},"timestamp":"2023-03-15 20:19:09"}
+{"level":"error","message":{"error":false,"model":"person/getByEmail"},"timestamp":"2023-03-15 20:19:10"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/willypruebas6@gmail.co"},"timestamp":"2023-03-15 20:20:50"}
+{"level":"error","message":{"error":false,"model":"person/getByEmail"},"timestamp":"2023-03-15 20:20:52"}
+{"level":"info","message":{"body":{"email":"willypruebas6@gmail.cosm","password":"lmnopqr"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-15 20:23:48"}
+{"level":"error","message":{"error":false,"model":"user/getByEmail"},"timestamp":"2023-03-15 20:23:49"}
+{"level":"info","message":{"body":{"email":"willypruebas6@gmail.com","password":"lmnopqr"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-15 20:23:58"}
+{"level":"info","message":{"body":{"email":"willyprueba6@gmail.com"},"method":"POST","params":"","query":"","url":"/api/user/recoveryPassword"},"timestamp":"2023-03-15 20:24:28"}
+{"level":"error","message":{"error":false,"model":"user/getByEmail"},"timestamp":"2023-03-15 20:24:28"}
+{"level":"info","message":{"body":{"email":"willypruebas6@gmail.com"},"method":"POST","params":"","query":"","url":"/api/user/recoveryPassword"},"timestamp":"2023-03-15 20:24:33"}
+{"level":"info","message":{"body":{"email":"willypruebas6@gmail.com","password":"lmnopqr"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-15 20:25:04"}
+{"level":"info","message":{"body":{"email":"willypruebas6@gmail.com","password":"EFGHIJK"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-15 20:25:08"}
+{"level":"info","message":{"body":{"email":"willypruebas6@gmail.com","password":"EFGHIJK"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-15 20:25:26"}

@@ -6,7 +6,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: "willypruebas6@gmail.com",
-    pass: "gabyevhelqxzrmcq", 
+    pass: "spboeojerncfkvoo", 
   },
   tls: {
     rejectUnauthorized: false,
@@ -20,7 +20,7 @@ transporter.verify().then(() => {
 const emailSender = async (person: any, newPassword: string) => {
   const EmailSent = await transporter.sendMail({
     from: '"Willy Quispe 👻" <willypruebas6@gmail.com>',
-    to: "willypruebas6@gmail.com",
+    to: person.email,
     subject: "Hola: " + person.name + " " + person.paternallastname,
     html:
       `<h1>Recovery password</h1></br>

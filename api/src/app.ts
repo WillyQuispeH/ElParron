@@ -1,5 +1,8 @@
 import express from "express";
+
 import * as routes from "./routes";
+
+import { reqLogger } from "./middlewares/logger";
 
 class App {
   public server: any;
@@ -15,9 +18,9 @@ class App {
   }
 
   routes() {
-    this.server.use("/api/user", routes.UserRouter);
-    this.server.use("/api/order", routes.OrderRouter);
-    this.server.use("/api/person", routes.PersonRouter)
+    this.server.use("/api/user", reqLogger, routes.UserRouter);
+    this.server.use("/api/order", reqLogger, routes.OrderRouter);
+    this.server.use("/api/person", reqLogger,  routes.PersonRouter)
   }
 }
 

@@ -6,9 +6,9 @@ import { hashPassword, passwordCompare } from "../util/password";
 const getAll: any = async () => {
   try {
     const result = await pool.query("SELECT id, person_id, hash FROM app.user");
-    return result.rows;
+    return { sucess: true, data: result.rows, error: false };
   } catch (e) {
-    return { e };
+    return { sucess: false, data: null, error: (e as Error).message };
   }
 };
 
@@ -18,12 +18,16 @@ const create: any = async (person_id: string, password: string) => {
     const result = await pool.query(
       `INSERT INTO app.user (person_id, hash)
         VALUES ($1, $2)
-          RETURNING * ;`,
+          ON CONFLICT (person_id) 
+            DO UPDATE SET hash = EXCLUDED.hash
+              RETURNING * ;`,
       [person_id, hash]
     );
-    return result.rows[0];
+
+    return { sucess: true, data: result.rows[0], error: false };
+    
   } catch (e) {
-    return { e };
+    return { sucess: false, data: null, error: (e as Error).message };
   }
 };
 
@@ -37,9 +41,9 @@ const assignPassword: any = async (id: string, password: string) => {
             RETURNING *;`,
       [id, hash]
     );
-    return result.rows[0];
+    return { sucess: true, data: result.rows[0], error: false };
   } catch (e) {
-    return { e };
+    return { sucess: false, data: null, error: (e as Error).message };
   }
 };
 
@@ -52,9 +56,10 @@ const validate: any = async (id: string, password: string) => {
       [id]
     );
     const isValid = await passwordCompare(password, result.rows[0].hash);
-    return isValid;
+    
+    return { sucess: true, data: isValid, error: false };
   } catch (e) {
-    return { e };
+    return { sucess: false, data: null, error: (e as Error).message };
   }
 };
 
