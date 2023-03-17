@@ -1,0 +1,2 @@
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/willyabadquispehuamani@gmsail.com"},"timestamp":"2023-03-17 18:02:06"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/person/getByEmail/willyabadquispehuamani@gmail.com"},"timestamp":"2023-03-17 18:02:34"}

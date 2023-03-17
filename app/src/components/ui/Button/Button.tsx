@@ -1,6 +1,6 @@
 import styles from "./Button.module.scss"
 interface IntButton{
-    onclick:any
+    onclick?:any
     valor:string,
     width:string,
     height:string

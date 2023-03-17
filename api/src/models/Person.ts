@@ -22,7 +22,6 @@ const getByEmail: any = async (email: string) => {
           WHERE email = $1`,
       [email]
     );
-
     return { sucess: true, data:result.rows[0], error: false };
   } catch (e) {
     return { sucess: false, data: null, error: (e as Error).message };

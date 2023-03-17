@@ -29,7 +29,14 @@ const Order = () => {
       <SubMenu>
         <Title title="Pedidos" />
         <Row gap="5px">
-          <InputText width="370px" label="Etiqueta" place="Text" type="text" />
+          <InputText
+            width="370px"
+            label="Etiqueta"
+            place="Text"
+            type="text"
+            value=""
+            onChange={null}
+          />
           <ComboBox
             width="184px"
             label="Sucursal"
@@ -49,12 +56,16 @@ const Order = () => {
                 label="Rut"
                 place="11.111.111-1"
                 type="text"
+                value=""
+                onChange={null}
               />
               <InputText
                 width="300px"
                 label="Nombre"
                 place="Julio Rodriguez Acevedo"
                 type="text"
+                value=""
+                onChange={null}
               />
             </Row>
             <Row gap="5px">
@@ -63,12 +74,16 @@ const Order = () => {
                 label="Correo electrónico"
                 place="julio@gmai.com"
                 type="email"
+                value=""
+                onChange={null}
               />
               <InputText
                 width="140px"
                 label="Teléfono"
                 place="+569 9934 1234"
                 type="text"
+                value=""
+                onChange={null}
               />
             </Row>
           </Column>
@@ -133,12 +148,16 @@ const Order = () => {
               label="Rut"
               place="11.111.111-1"
               type="text"
+              value=""
+              onChange={null}
             />
             <InputText
               width="445px"
               label="Rut"
               place="11.111.111-1"
               type="text"
+              value=""
+              onChange={null}
             />
           </Column>
         </Column>
@@ -171,12 +190,16 @@ const Order = () => {
                 label="Precio"
                 place="$10.000"
                 type="text"
+                value=""
+                onChange={null}
               />
               <InputText
                 width="130px"
                 label="Abono"
                 place="$10.000"
                 type="text"
+                value=""
+                onChange={null}
               />
             </Row>
             <Column gap="5px">
@@ -192,12 +215,16 @@ const Order = () => {
                 label="Estado de pago"
                 place="Pendiente"
                 type="text"
+                value=""
+                onChange={null}
               />
               <InputText
                 width="266px"
                 label="Estado de pedido"
                 place="En camara"
                 type="text"
+                value=""
+                onChange={null}
               />
             </Column>
           </Column>
@@ -207,6 +234,8 @@ const Order = () => {
               label="Usuario"
               place="Juan Perez"
               type="text"
+              value=""
+              onChange={null}
             />
             <Row gap="5px">
               <InputText
@@ -214,8 +243,17 @@ const Order = () => {
                 label="Fecha"
                 place="12/02/2022"
                 type="text"
+                value=""
+                onChange={null}
               />
-              <InputText width="100px" label="Hora" place="15:12" type="text" />
+              <InputText
+                width="100px"
+                label="Hora"
+                place="15:12"
+                type="text"
+                value=""
+                onChange={null}
+              />
             </Row>
           </Column>
         </Column>

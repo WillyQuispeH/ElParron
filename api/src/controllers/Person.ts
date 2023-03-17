@@ -6,7 +6,7 @@ const getByEmail = async (req: any, res: any) => {
   const { email } = req.params;
 
   const result = await PersonModel.getByEmail(email);
-  if (!result.sucess || !result.data) {
+  if (!result.sucess) {
     createLogger.error({
       model: "person/getByEmail",
       error: result.error,
@@ -15,7 +15,10 @@ const getByEmail = async (req: any, res: any) => {
     res.status(500).json(result.error);
     return;
   }
-
+  if (!result.data) {
+    res.status(200).json({ sucess: true, data: null, error: false });
+    return;
+  }
   res.status(200).json({ sucess: true, data: result.data, error: false });
 };
 

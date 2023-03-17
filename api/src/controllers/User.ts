@@ -45,6 +45,7 @@ const create = async (req: any, res: any) => {
     address,
     district
   );
+  
   if (!resultPerson.sucess) {
     createLogger.error({
       model: "user/createPerson",
@@ -91,13 +92,18 @@ const validate = async (req: any, res: any) => {
   const { email, password } = req.body;
 
   const resultPerson = await PersonModel.getByEmail(email);
-  if (!resultPerson.sucess || !resultPerson.data) {
+  if (!resultPerson.sucess) {
     createLogger.error({
       model: "user/getByEmail",
       error: resultPerson.error,
     });
 
     res.status(500).json(resultPerson.error);
+    return;
+  }
+
+  if (!resultPerson.data) {
+    res.status(200).json({ sucess: true, data: false, error: false });
     return;
   }
 
@@ -119,7 +125,7 @@ const recoveryPassword = async (req: any, res: any) => {
   const { email } = req.body;
 
   const resultPerson = await PersonModel.getByEmail(email);
-  if (!resultPerson.sucess || !resultPerson.data) {
+  if (!resultPerson.sucess) {
     createLogger.error({
       model: "user/getByEmail",
       error: resultPerson.error,
@@ -129,12 +135,18 @@ const recoveryPassword = async (req: any, res: any) => {
     return;
   }
 
+  if (!resultPerson.data) {
+    res.status(200).json({ sucess: true, data: false, error: false });
+    return;
+  }
+
   const newPassword = generatePassword();
 
   const resulAssingPassword = await UserModel.assignPassword(
     resultPerson.data.id,
     newPassword
   );
+
   if (!resulAssingPassword.sucess) {
     createLogger.error({
       model: "user/assignPassword",
