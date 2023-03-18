@@ -45,7 +45,7 @@ const create = async (req: any, res: any) => {
     address,
     district
   );
-  
+
   if (!resultPerson.sucess) {
     createLogger.error({
       model: "user/createPerson",
@@ -92,6 +92,7 @@ const validate = async (req: any, res: any) => {
   const { email, password } = req.body;
 
   const resultPerson = await PersonModel.getByEmail(email);
+
   if (!resultPerson.sucess) {
     createLogger.error({
       model: "user/getByEmail",
@@ -103,11 +104,12 @@ const validate = async (req: any, res: any) => {
   }
 
   if (!resultPerson.data) {
-    res.status(200).json({ sucess: true, data: false, error: false });
+    res.status(200).json({ sucess: false, data: null, error: false });
     return;
   }
 
   const isValid = await UserModel.validate(resultPerson.data.id, password);
+
   if (!isValid.sucess) {
     createLogger.error({
       model: "user/validate",
@@ -117,8 +119,13 @@ const validate = async (req: any, res: any) => {
     res.status(500).json(isValid.error);
     return;
   }
+  
+  if (!isValid.data) {
+    res.status(200).json({ sucess: false, data: null, error: false });
+    return;
+  }
 
-  res.status(200).json({ sucess: true, data: isValid.data, error: false });
+  res.status(200).json({ sucess: true, data: resultPerson.data, error: false });
 };
 
 const recoveryPassword = async (req: any, res: any) => {

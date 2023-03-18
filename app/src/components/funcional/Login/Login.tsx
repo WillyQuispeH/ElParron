@@ -9,33 +9,43 @@ import Link from "@/components/ui/Link";
 import Logo from "@/components/ui/Logo";
 
 import apiInstance from "@/util/api";
+import { useUser } from "@/context/loginUser";
 
 const Login = () => {
   const router = useRouter();
-  
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const HandleOnChangeEmail = (e: any) => {
-    setEmail(e.target.value);
+  const userLogin = useUser((state) => state.setUser);
+
+  const inicialForm = {
+    email: "",
+    password: "",
   };
 
-  const HandleOnChangePassword = (e: any) => {
-    setPassword(e.target.value);
+  const [form, setForm] = useState(inicialForm);
+
+  const handleOnChange = (e: any) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const HandleOnclickLogin = async () => {
-    const credentials = {
-      email,
-      password,
-    };
+  const handleOnclickLogin = async () => {
+    const credentials = form;
 
     const resultValidate = await apiInstance.post(
       "/user/validate",
       credentials
     );
-    
-    if (resultValidate.data.data) {
+
+    if (resultValidate.data.sucess) {
+      userLogin(
+        resultValidate.data.data.rut,
+        resultValidate.data.data.name,
+        resultValidate.data.data.paternallastname,
+        resultValidate.data.data.maternallastname,
+        resultValidate.data.data.email
+      );
       router.push("/welcome");
     } else {
       alert("Acceso Denegado");
@@ -51,20 +61,22 @@ const Login = () => {
             <InputText
               label="Correo electrónico"
               type="email"
+              name="email"
               width="300px"
-              value={email}
-              onChange={HandleOnChangeEmail}
+              value={form.email}
+              onChange={handleOnChange}
             />
             <InputText
               label="Contraseña"
               type="password"
               width="300px"
-              value={password}
-              onChange={HandleOnChangePassword}
+              name="password"
+              value={form.password}
+              onChange={handleOnChange}
             />
           </Column>
           <Button
-            onclick={HandleOnclickLogin}
+            onClick={handleOnclickLogin}
             valor="Ingresar"
             width="200px"
             height="40px"
