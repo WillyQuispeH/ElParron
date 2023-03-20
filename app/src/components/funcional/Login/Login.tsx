@@ -10,24 +10,31 @@ import Logo from "@/components/ui/Logo";
 
 import apiInstance from "@/util/api";
 import { useUser } from "@/context/loginUser";
+import { regexEmail } from "@/util/regEx";
 
 const Login = () => {
-  const router = useRouter();
-
-  const userLogin = useUser((state) => state.setUser);
-
   const inicialForm = {
     email: "",
     password: "",
   };
+  const router = useRouter();
 
+  const userLogin = useUser((state) => state.setUser);
+  const [isValidEmail, setIsValidEmail] = useState(true);
   const [form, setForm] = useState(inicialForm);
+
 
   const handleOnChange = (e: any) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
+
+    if (e.target.name == "email") {
+      regexEmail.test(e.target.value.trim())
+        ? setIsValidEmail(true)
+        : setIsValidEmail(false);
+    }
   };
 
   const handleOnclickLogin = async () => {
@@ -65,6 +72,7 @@ const Login = () => {
               width="300px"
               value={form.email}
               onChange={handleOnChange}
+              isValid={isValidEmail}
             />
             <InputText
               label="Contraseña"

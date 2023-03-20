@@ -9,7 +9,7 @@ const SideBar = () => {
   const router = useRouter();
   const { sidebar , setSidebar } = useContext(UIContext);
 
-  const HandleClickOption=(text :string)=>{
+  const handleClickOption=(text :string)=>{
     router.push(text);
     setSidebar(!sidebar);
   }
@@ -21,7 +21,7 @@ const SideBar = () => {
           <h1>{item.sectionText}</h1>
           <ul>
             {item.options.map((optionsitem: any, optionsidx: number) => (
-              <li key={optionsidx} onClick={()=>HandleClickOption(optionsitem.path) } >{optionsitem.text}</li>
+              <li key={optionsidx} onClick={()=>handleClickOption(optionsitem.path) } >{optionsitem.text}</li>
             ))}
           </ul>
         </div>
