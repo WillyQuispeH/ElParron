@@ -1,0 +1,27 @@
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"Abad957902342..."},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 17:44:53"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"Abad957902342..."},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 17:45:08"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342..."},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 17:45:17"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 17:45:26"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 17:47:58"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 17:48:57"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 17:48:57"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 17:54:01"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 18:04:59"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 18:06:39"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 18:09:16"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 18:14:19"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 18:19:36"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 18:19:36"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 19:19:09"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 19:19:10"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 19:19:10"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 19:19:10"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 19:19:10"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 19:19:10"}
+{"level":"error","message":{"error":"too many connections for role \"ajeianeg\"","model":"user/getByEmail"},"timestamp":"2023-03-21 19:19:11"}
+{"level":"error","message":{"error":"too many connections for role \"ajeianeg\"","model":"user/getByEmail"},"timestamp":"2023-03-21 19:19:11"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 19:19:20"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 19:39:43"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 19:43:54"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 19:44:34"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-21 19:48:21"}

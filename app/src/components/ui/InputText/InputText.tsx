@@ -15,6 +15,7 @@ interface IntInputText {
   value: string;
   maxLength?: number;
 }
+
 const InputText = ({
   type,
   label,

@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Screen from "@/components/layout/Screen";
-import SubMenu from "@/components/layout/SubMenu";
-import Header from "@/components/ui/Header";
-import SideBar from "@/components/ui/SideBar";
-import Title from "@/components/ui/Title";
+import Text from "@/components/ui/Text";
 import InputText from "@/components/ui/InputText";
 import Button from "@/components/ui/Button";
 import apiInstance from "@/util/api";
@@ -206,14 +202,8 @@ const User = () => {
   };
 
   return (
-    <Screen>
-      <Header />
-      <SideBar />
-      <SubMenu>
-        <Title title="Create User" />
-      </SubMenu>
       <Column gap="20px">
-        <Title title="Create User" />
+        <Text text="Create User" />
         <Column gap="5px">
           <InputText
             onChange={handleOnChange}
@@ -308,7 +298,6 @@ const User = () => {
           disabled={buttonDisable}
         />
       </Column>
-    </Screen>
   );
 };
 

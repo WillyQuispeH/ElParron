@@ -1,13 +1,10 @@
 import React from "react";
 
 import { useUser } from "@/context/loginUser";
-
-import Screen from "@/components/layout/Screen";
-import Logo from "@/components/ui/Logo";
-import Header from "@/components/ui/Header";
-import SideBar from "@/components/ui/SideBar";
 import { Column } from "@/components/layout/Generic/Generic";
-import Title from "@/components/ui/Title";
+
+import Logo from "@/components/ui/Logo";
+import Text from "@/components/ui/Text";
 
 const Welcome = () => {
 
@@ -17,19 +14,15 @@ const Welcome = () => {
     paternalLastName:state.paternalLastName,
     maternalLastName:state.maternalLastName,
     email:state.email
-  }))
+  }));
   
   return (
-    <Screen>
-      <Header />
-      <SideBar />
       <Column gap="20px">
         <Logo width="436px" height="305px" />
-        <Title title={"Bienvenido: " + name +" " + paternalLastName +" "+ maternalLastName} />
-        <Title title={"Rut: "+ rut} />
-        <Title title={"Email: "+email} />
+        <Text text={"Bienvenido: " + name +" " + paternalLastName +" "+ maternalLastName} />
+        <Text text={"Rut: "+ rut} />
+        <Text text={"Email: "+email} />
       </Column>
-    </Screen>
   );
 };
 

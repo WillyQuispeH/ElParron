@@ -1,12 +1,11 @@
 .sideBar {
-    transition: all 0.4s;
-    left: -250px;
+    transition: left 0.4s;
     position: fixed;
     width: 250px;
-    height: 100vh;
+    height: calc(100vh - 50px);
     background: #474436ed;
-    margin-top: 100px;
-    overflow: auto;
+    overflow: hidden;
+    overflow-y: auto;
     z-index: 20;
 
     h1 {

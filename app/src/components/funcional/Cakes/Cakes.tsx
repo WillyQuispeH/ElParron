@@ -1,21 +1,9 @@
-import React from 'react'
-import Screen from '../../layout/Screen'
-import SubMenu from '../../layout/SubMenu'
-import Header from '../../ui/Header'
-import SideBar from '../../ui/SideBar'
-import Title from '../../ui/Title'
+import React from "react";
+
+import Option from "@/components/layout/Option";
 
 const Cakes = () => {
-  return (
-    <Screen>
-        <Header/>
-        <SideBar/>
-        <SubMenu>
-            <Title title='Tortas estándar'/>
-        </SubMenu>
-        <Title title='Tortas estándar'/>
-    </Screen>
-  )
-}
+  return <Option></Option>;
+};
 
-export default Cakes
+export default Cakes;

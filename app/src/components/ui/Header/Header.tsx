@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 
 import { Row } from "@/components/layout/Generic/Generic";
 import UIContext from "@/context/ui";
-
 import ButtonIcon from "../ButtonIcon";
 
 import styles from "./Header.module.scss";
@@ -12,47 +11,37 @@ const Header = () => {
   const router = useRouter();
   const { sidebar, setSidebar } = useContext(UIContext);
 
-  const HanOnclickSideBar = () => {
+  const hanOnclickSideBar = () => {
     setSidebar(!sidebar);
   };
 
-  const HandleClickOption = () => {
+  const handleClickOption = () => {
     router.push("/welcome");
+    setSidebar(!sidebar);
+  };
+
+  const handleClickUser = () => {
+    router.push("/user");
+    setSidebar(!sidebar);
   };
 
   return (
     <div className={styles.header}>
-      <ButtonIcon
-        onclick={HanOnclickSideBar}
-        typeButton="square"
-        icon="menu"
-      ></ButtonIcon>
+      <ButtonIcon onclick={hanOnclickSideBar} typeButton="square" icon="menu" />
       <Row gap="10px">
         <ButtonIcon
-          onclick={HandleClickOption}
+          onclick={handleClickOption}
           typeButton="square"
           icon="home"
-        ></ButtonIcon>
+        />
+        <ButtonIcon onclick={null} typeButton="square" icon="monitoring" />
+        <ButtonIcon onclick={null} typeButton="square" icon="qr_code_2" />
+        <ButtonIcon onclick={null} typeButton="square" icon="inbox" />
         <ButtonIcon
-          onclick={null}
-          typeButton="square"
-          icon="monitoring"
-        ></ButtonIcon>
-        <ButtonIcon
-          onclick={null}
-          typeButton="square"
-          icon="qr_code_2"
-        ></ButtonIcon>
-        <ButtonIcon
-          onclick={null}
-          typeButton="square"
-          icon="inbox"
-        ></ButtonIcon>
-        <ButtonIcon
-          onclick={null}
+          onclick={handleClickUser}
           typeButton="circle"
           icon="person"
-        ></ButtonIcon>
+        />
       </Row>
     </div>
   );
