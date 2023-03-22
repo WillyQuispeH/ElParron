@@ -1,3 +1,3 @@
-import Option from "./Option";
+import { Option, Title, Body } from "./Option";
 
-export default Option
+export { Option, Title, Body };

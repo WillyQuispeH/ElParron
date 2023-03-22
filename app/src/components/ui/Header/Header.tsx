@@ -17,12 +17,10 @@ const Header = () => {
 
   const handleClickOption = () => {
     router.push("/welcome");
-    setSidebar(!sidebar);
   };
 
   const handleClickUser = () => {
     router.push("/user");
-    setSidebar(!sidebar);
   };
 
   return (

@@ -23,7 +23,6 @@ const Login = () => {
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [form, setForm] = useState(inicialForm);
 
-
   const handleOnChange = (e: any) => {
     setForm({
       ...form,

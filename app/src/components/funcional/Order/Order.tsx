@@ -5,7 +5,7 @@ import { Column, Row } from "../../layout/Generic/Generic";
 import ComboBox from "@/components/ui/ComboBox";
 import InputDate from "@/components/ui/InputDate";
 import InputText from "@/components/ui/InputText";
-import Option from "@/components/layout/Option";
+import { Option, Title, Body } from "@/components/layout/Option";
 
 const Order = () => {
   const inputDataShape = [
@@ -22,6 +22,27 @@ const Order = () => {
   return (
     <>
       <Option>
+        <Title title="Pedido">
+          <Row gap="5px">
+            <InputText
+              width="370px"
+              label="Nombre"
+              place="Julio Rodriguez Acevedo"
+              type="text"
+              value=""
+              onChange={null}
+            />
+            <ComboBox
+              width="184px"
+              label="Forma"
+              data={inputDataShape}
+              valueName="id"
+              textName="value"
+            />
+            <InputDate width="138px" label="Fecha" />
+          </Row>
+        </Title>
+        <Body>
         <Row gap="20px">
           <Column gap="20px">
             <Column gap="5px">
@@ -233,6 +254,7 @@ const Order = () => {
             </Column>
           </Column>
         </Row>
+        </Body>
       </Option>
     </>
   );

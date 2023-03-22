@@ -8,6 +8,7 @@ import apiInstance from "@/util/api";
 import { Column } from "@/components/layout/Generic/Generic";
 import { regexEmail, regexPhone } from "@/util/regEx";
 import { validateRut, formatRut, notFormatRut } from "@/util/validateRut";
+import { Body, Title, Option } from "@/components/layout/Option";
 
 const User = () => {
   const initialForm = {
@@ -202,102 +203,107 @@ const User = () => {
   };
 
   return (
-      <Column gap="20px">
-        <Text text="Create User" />
-        <Column gap="5px">
-          <InputText
-            onChange={handleOnChange}
-            onBlur={handleOnBlur}
-            onFocus={handleOnFocus}
-            label="Rut"
-            type="text"
-            width="300px"
-            value={form.rut.value}
-            name="rut"
-            isValid={form.rut.isvalid}
-          />
-          <InputText
-            onChange={handleOnChange}
-            label="Nombre"
-            type="text"
-            width="300px"
-            value={form.name.value}
-            name="name"
-            isValid={form.name.isvalid}
-          />
-          <InputText
-            onChange={handleOnChange}
-            label="Apellido Paterno"
-            type="text"
-            width="300px"
-            value={form.paternalLastName.value}
-            name="paternalLastName"
-            isValid={form.paternalLastName.isvalid}
-          />
-          <InputText
-            onChange={handleOnChange}
-            label="Apellido Materno"
-            type="text"
-            width="300px"
-            value={form.maternalLastName.value}
-            name="maternalLastName"
-            isValid={form.maternalLastName.isvalid}
-          />
-          <InputText
-            onChange={handleOnChange}
-            label="Email"
-            type="text"
-            width="300px"
-            value={form.email.value}
-            name="email"
-            isValid={form.email.isvalid}
-          />
-          <InputText
-            onChange={handleOnChange}
-            label="Teléfono"
-            type="text"
-            width="300px"
-            value={form.phone.value}
-            name="phone"
-            isValid={form.phone.isvalid}
-            maxLength={9}
-          />
-          <InputText
-            onChange={handleOnChange}
-            label="Dirección"
-            type="text"
-            width="300px"
-            value={form.address.value}
-            name="address"
-            isValid={form.address.isvalid}
-          />
-          <InputText
-            onChange={handleOnChange}
-            label="Comuna"
-            type="text"
-            width="300px"
-            value={form.district.value}
-            name="district"
-            isValid={form.district.isvalid}
-          />
-          <InputText
-            onChange={handleOnChange}
-            label="Contraseña"
-            type="password"
-            width="300px"
-            value={form.password.value}
-            name="password"
-            isValid={form.password.isvalid}
+    <Option>
+      <Title title="User"></Title>
+      <Body>
+        <Column gap="20px">
+          <Text text="Create User" />
+          <Column gap="5px">
+            <InputText
+              onChange={handleOnChange}
+              onBlur={handleOnBlur}
+              onFocus={handleOnFocus}
+              label="Rut"
+              type="text"
+              width="300px"
+              value={form.rut.value}
+              name="rut"
+              isValid={form.rut.isvalid}
+            />
+            <InputText
+              onChange={handleOnChange}
+              label="Nombre"
+              type="text"
+              width="300px"
+              value={form.name.value}
+              name="name"
+              isValid={form.name.isvalid}
+            />
+            <InputText
+              onChange={handleOnChange}
+              label="Apellido Paterno"
+              type="text"
+              width="300px"
+              value={form.paternalLastName.value}
+              name="paternalLastName"
+              isValid={form.paternalLastName.isvalid}
+            />
+            <InputText
+              onChange={handleOnChange}
+              label="Apellido Materno"
+              type="text"
+              width="300px"
+              value={form.maternalLastName.value}
+              name="maternalLastName"
+              isValid={form.maternalLastName.isvalid}
+            />
+            <InputText
+              onChange={handleOnChange}
+              label="Email"
+              type="text"
+              width="300px"
+              value={form.email.value}
+              name="email"
+              isValid={form.email.isvalid}
+            />
+            <InputText
+              onChange={handleOnChange}
+              label="Teléfono"
+              type="text"
+              width="300px"
+              value={form.phone.value}
+              name="phone"
+              isValid={form.phone.isvalid}
+              maxLength={9}
+            />
+            <InputText
+              onChange={handleOnChange}
+              label="Dirección"
+              type="text"
+              width="300px"
+              value={form.address.value}
+              name="address"
+              isValid={form.address.isvalid}
+            />
+            <InputText
+              onChange={handleOnChange}
+              label="Comuna"
+              type="text"
+              width="300px"
+              value={form.district.value}
+              name="district"
+              isValid={form.district.isvalid}
+            />
+            <InputText
+              onChange={handleOnChange}
+              label="Contraseña"
+              type="password"
+              width="300px"
+              value={form.password.value}
+              name="password"
+              isValid={form.password.isvalid}
+            />
+          </Column>
+          <Button
+            onClick={handleOnclickCreate}
+            valor="Insertar"
+            width="200px"
+            height="40px"
+            disabled={buttonDisable}
           />
         </Column>
-        <Button
-          onClick={handleOnclickCreate}
-          valor="Insertar"
-          width="200px"
-          height="40px"
-          disabled={buttonDisable}
-        />
-      </Column>
+      </Body>
+    </Option>
   );
 };
 

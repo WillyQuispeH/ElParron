@@ -1,9 +1,14 @@
 import React from "react";
 
-import Option from "@/components/layout/Option";
+import { Option, Title, Body } from "@/components/layout/Option";
 
 const Individual = () => {
-  return <Option></Option>;
+  return (
+    <Option>
+      <Title title="Individual"></Title>
+      <Body></Body>
+    </Option>
+  );
 };
 
 export default Individual;

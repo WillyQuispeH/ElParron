@@ -1,9 +1,14 @@
 import React from "react";
 
-import Option from "@/components/layout/Option";
+import { Option, Title, Body } from "@/components/layout/Option";
 
 const CoolingChamber = () => {
-  return <Option></Option>;
+  return (
+    <Option>
+      <Title title="CoolingChamber"></Title>
+      <Body></Body>
+    </Option>
+  );
 };
 
 export default CoolingChamber;
