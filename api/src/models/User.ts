@@ -6,7 +6,16 @@ import { hashPassword, passwordCompare } from "../util/password";
 const getAll: any = async () => {
   try {
     const result = await pool.query("SELECT id, person_id, hash FROM app.user");
-    return { sucess: true, data: result.rows, error: false };
+    return { sucess: true, data: result.rows, error: null };
+  } catch (e) {
+    return { sucess: false, data: null, error: (e as Error).message };
+  }
+};
+
+const getById: any = async (id:string)=>{
+  try {
+    const result = await pool.query("SELECT id, person_id, hash FROM app.user WHERE person_id=$1", [id]);
+    return {sucess :true, data:result.rows[0], error:false}
   } catch (e) {
     return { sucess: false, data: null, error: (e as Error).message };
   }
@@ -63,4 +72,4 @@ const validate: any = async (id: string, password: string) => {
   }
 };
 
-export { getAll, create, assignPassword, validate };
+export { getAll, getById, create, assignPassword, validate };

@@ -1,7 +1,7 @@
 import { UiProvider } from "@/context/ui";
 import type { AppProps } from "next/app";
 
-import { useUser } from "@/context/loginUser";
+import useUser from "@/store/hooks";
 
 import Login from "@/components/funcional/Login";
 import Template from "@/components/layout/Template";
@@ -9,9 +9,11 @@ import Template from "@/components/layout/Template";
 import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const {user} = useUser();
   return (
     <UiProvider>
-     { useUser(state => state.rut) ? <Template><Component {...pageProps} /></Template>: <Login/>}
+     { user.id ? <Template><Component {...pageProps} /></Template>:<Login/>}
     </UiProvider>
+    
   );
 }

@@ -3,12 +3,13 @@ import React, { useEffect, useState } from "react";
 import Text from "@/components/ui/Text";
 import InputText from "@/components/ui/InputText";
 import Button from "@/components/ui/Button";
-import apiInstance from "@/util/api";
 
 import { Column } from "@/components/layout/Generic/Generic";
+import { Body, Title, Option } from "@/components/layout/Option";
 import { regexEmail, regexPhone } from "@/util/regEx";
 import { validateRut, formatRut, notFormatRut } from "@/util/validateRut";
-import { Body, Title, Option } from "@/components/layout/Option";
+
+import useUser from "@/store/hooks";
 
 const User = () => {
   const initialForm = {
@@ -24,30 +25,9 @@ const User = () => {
   };
 
   const [form, setForm] = useState(initialForm);
-  const [buttonDisable, setButtonDisable] = useState(true);
+  const [buttonDisable, setButtonDisable] = useState(false);
 
-  useEffect(() => {
-    form.rut.isvalid &&
-    form.rut.value &&
-    form.name.isvalid &&
-    form.name.value &&
-    form.paternalLastName.isvalid &&
-    form.paternalLastName.value &&
-    form.maternalLastName.isvalid &&
-    form.maternalLastName.value &&
-    form.email.isvalid &&
-    form.email.value &&
-    form.phone.isvalid &&
-    form.phone.value &&
-    form.address.isvalid &&
-    form.address.value &&
-    form.district.isvalid &&
-    form.district.value &&
-    form.password.isvalid &&
-    form.password.value
-      ? setButtonDisable(false)
-      : setButtonDisable(true);
-  });
+  const { user, createUser, isLoadingUser, isErrorUser } = useUser();
 
   const handleOnChange = (e: any) => {
     setForm({
@@ -192,15 +172,37 @@ const User = () => {
       district: form.district.value,
       password: form.password.value,
     };
-
-    const resultCreate = await apiInstance.post("/user/create", credentials);
-
-    if (resultCreate.data.sucess) {
-      alert("Usuario Registrado");
-    } else {
-      alert("Error");
-    }
+    createUser(
+      credentials.rut,
+      credentials.name,
+      credentials.paternallastname,
+      credentials.maternallastname,
+      credentials.email,
+      credentials.phone,
+      credentials.address,
+      credentials.district,
+      credentials.password
+    );
+    console.log(credentials.rut,
+      credentials.name,
+      credentials.paternallastname,
+      credentials.maternallastname,
+      credentials.email,
+      credentials.phone,
+      credentials.address,
+      credentials.district,
+      credentials.password);
   };
+
+  useEffect(() => {
+    if (isLoadingUser === false) {
+      if (user.id !== "") {
+        alert("Usuario registrado");
+      } else {
+        alert("Error");
+      }
+    }
+  }, [isLoadingUser]);
 
   return (
     <Option>

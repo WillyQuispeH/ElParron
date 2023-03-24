@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+
+import useUser from "@/store/hooks";
 
 import { Column } from "@/components/layout/Generic/Generic";
 import Screen from "@/components/layout/Screen";
@@ -8,18 +10,17 @@ import InputText from "@/components/ui/InputText";
 import Link from "@/components/ui/Link";
 import Logo from "@/components/ui/Logo";
 
-import apiInstance from "@/util/api";
-import { useUser } from "@/context/loginUser";
 import { regexEmail } from "@/util/regEx";
+
 
 const Login = () => {
   const inicialForm = {
     email: "",
     password: "",
   };
-  const router = useRouter();
 
-  const userLogin = useUser((state) => state.setUser);
+  const router = useRouter();
+  const {user, validateUser } = useUser();
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [form, setForm] = useState(inicialForm);
 
@@ -38,25 +39,11 @@ const Login = () => {
 
   const handleOnclickLogin = async () => {
     const credentials = form;
-
-    const resultValidate = await apiInstance.post(
-      "/user/validate",
-      credentials
-    );
-
-    if (resultValidate.data.sucess) {
-      userLogin(
-        resultValidate.data.data.rut,
-        resultValidate.data.data.name,
-        resultValidate.data.data.paternallastname,
-        resultValidate.data.data.maternallastname,
-        resultValidate.data.data.email
-      );
-      router.push("/welcome");
-    } else {
-      alert("Acceso Denegado");
-    }
+    validateUser(credentials.email, credentials.password);
+    router.push("/welcome");
   };
+ 
+ 
 
   return (
     <Screen>

@@ -7,12 +7,15 @@ import apiInstance from "@/util/api";
 type userState = {
   user: IUser;
   list: IUser[];
+  isLoading: boolean;
+  isError: boolean;
+  error: string;
   getAll: () => void;
   create: (
     rut: string,
     name: string,
-    paternallastname: string,
-    maternallastname: string,
+    paternalLastName: string,
+    maternalLastName: string,
     email: string,
     phone: string,
     address: string,
@@ -25,71 +28,181 @@ type userState = {
 };
 
 const initData = {
+  id: "",
+  person_id: "",
   rut: "",
   name: "",
-  paternallastname: "",
-  maternallastname: "",
+  paternalLastName: "",
+  maternalLastName: "",
   email: "",
   phone: "",
   address: "",
   district: "",
-  password: "",
 };
 
 export const userStore = create<userState>((set, get) => ({
   user: initData,
   list: [],
+  isLoading: false,
+  isError: false,
+  error: "",
 
   getAll: async () => {
-    const { data } = await apiInstance.get("/user/getAll");
-    set((state) => ({ ...state, list: data }));
+    try {
+      set((state) => ({
+        ...state,
+        isLoading: true,
+        isError: false,
+        error: "",
+      }));
+      const { data } = await apiInstance.get("/user/getAll");
+      set((state) => ({
+        ...state,
+        isLoading: false,
+        isError: false,
+        error: "",
+      }));
+      set((state) => ({ ...state, list: data }));
+    } catch (e) {
+      set((state) => ({
+        ...state,
+        isLoading: false,
+        isError: true,
+        error: (e as Error).message,
+      }));
+    }
   },
 
   create: async (
     rut: string,
     name: string,
-    paternallastname: string,
-    maternallastname: string,
+    paternalLastName: string,
+    maternalLastName: string,
     email: string,
     phone: string,
     address: string,
     district: string,
     password: string
   ) => {
-    const { data } = await apiInstance.post("/user/create", {
-      rut,
-      name,
-      paternallastname,
-      maternallastname,
-      email,
-      phone,
-      address,
-      district,
-      password,
-    });
-    set((state) => ({ ...state, user: data }));
+    try {
+      set((state) => ({
+        ...state,
+        isLoading: true,
+        isError: false,
+        error: "",
+      }));
+      const { data } = await apiInstance.post("/user/create", {
+        rut,
+        name,
+        paternalLastName,
+        maternalLastName,
+        email,
+        phone,
+        address,
+        district,
+        password,
+      });
+      set((state) => ({
+        ...state,
+        isLoading: false,
+        isError: false,
+        error: "",
+      }));
+      set((state) => ({ ...state, user: data.data }));
+    } catch (e) {
+      set((state) => ({
+        ...state,
+        isLoading: false,
+        isError: true,
+        error: (e as Error).message,
+      }));
+    }
   },
 
   assignPassword: async (id: string, password: string) => {
-    const { data } = await apiInstance.put("/user/assignPassword", {
-      id,
-      password,
-    });
-    set((state) => ({ ...state, user: data }));
+    try {
+      set((state) => ({
+        ...state,
+        isLoading: true,
+        isError: false,
+        error: "",
+      }));
+      const { data } = await apiInstance.put("/user/assignPassword", {
+        id,
+        password,
+      });
+      set((state) => ({
+        ...state,
+        isLoading: false,
+        isError: false,
+        error: "",
+      }));
+      set((state) => ({ ...state, user: data }));
+    } catch (e) {
+      set((state) => ({
+        ...state,
+        isLoading: false,
+        isError: true,
+        error: (e as Error).message,
+      }));
+    }
   },
 
   validate: async (email: string, password: string) => {
-    const { data } = await apiInstance.post("/user/validate", {
-      email,
-      password,
-    });
-    set((state) => ({ ...state, user: data }));
+    try {
+      set((state) => ({
+        ...state,
+        isLoading: true,
+        isError: false,
+        error: "",
+      }));
+      const { data } = await apiInstance.post("/user/validate", {
+        email,
+        password,
+      });
+      set((state) => ({
+        ...state,
+        isLoading: false,
+        isError: false,
+        error: "",
+      }));
+      data.sucess
+        ? set((state) => ({ ...state, user: data.data }))
+        : set((state) => ({ ...state, user: initData }));
+    } catch (e) {
+      set((state) => ({
+        ...state,
+        isLoading: false,
+        isError: true,
+        error: (e as Error).message,
+      }));
+    }
   },
 
   recoveryPassword: async (email: string) => {
-    const { data } = await apiInstance.post("user/recoveryPassword", { email });
-    set((state) => ({ ...state, user: data }));
+    try {
+      set((state) => ({
+        ...state,
+        isLoading: true,
+        isError: false,
+        error: "",
+      }));
+      const { data } = await apiInstance.post("user/recoveryPassword", {
+        email,
+      });
+      set((state) => ({
+        ...state,
+        isLoading: false,
+        isError: false,
+        error: "",
+      }));
+    } catch (e) {
+      set((state) => ({
+        ...state,
+        isLoading: false,
+        isError: true,
+        error: (e as Error).message,
+      }));
+    }
   },
-
 }));
-

@@ -1,27 +1,20 @@
 import React from "react";
 
-import { useUser } from "@/context/loginUser";
 import { Column } from "@/components/layout/Generic/Generic";
 
 import Logo from "@/components/ui/Logo";
 import Text from "@/components/ui/Text";
+import useUser from "@/store/hooks";
 
 const Welcome = () => {
 
-  const {rut, name, paternalLastName, maternalLastName, email} = useUser(state => ({
-    rut:state.rut,
-    name:state.name,
-    paternalLastName:state.paternalLastName,
-    maternalLastName:state.maternalLastName,
-    email:state.email
-  }));
-  
+  const {user} = useUser();
   return (
       <Column gap="20px">
         <Logo width="436px" height="305px" />
-        <Text text={"Bienvenido: " + name +" " + paternalLastName +" "+ maternalLastName} />
-        <Text text={"Rut: "+ rut} />
-        <Text text={"Email: "+email} />
+        <Text text={"Bienvenido: " + user.name+" " + user.paternalLastName +" "+ user.maternalLastName} />
+        <Text text={"Rut: "+ user.rut} />
+        <Text text={"Email: "+user.email} />
       </Column>
   );
 };

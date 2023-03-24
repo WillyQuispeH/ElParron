@@ -1,6 +1,7 @@
 import createLogger from "../util/logger";
 
 import * as PersonModel from "../models/Person";
+import * as UserModel from "../models/User";
 
 const getByEmail = async (req: any, res: any) => {
   const { email } = req.params;
@@ -57,26 +58,28 @@ const getByRut = async (req: any, res: any) => {
 };
 
 const getAll = async (req: any, res: any) => {
-  const result = await PersonModel.getAll();
-  if (!result.sucess) {
+  const resultPerson = await PersonModel.getAll();
+  if (!resultPerson.sucess) {
     createLogger.error({
       model: "person/getByAll",
-      error: result.error,
+      error: resultPerson.error,
     });
 
-    res.status(500).json(result.error);
+    res.status(500).json(resultPerson.error);
     return;
   }
+  const resultUser = await UserModel.getById(resultPerson.data.id);
 
-  res.status(200).json({ sucess: true, data: result.data, error: false });
+  
+  res.status(200).json({ sucess: true, data: resultPerson.data, error: false });
 };
 
 const create = async (req: any, res: any) => {
   const {
     rut,
     name,
-    paternallastname,
-    maternallastname,
+    paternalLastName,
+    maternalLastName,
     email,
     phone,
     address,
@@ -86,8 +89,8 @@ const create = async (req: any, res: any) => {
   const result = await PersonModel.create(
     rut,
     name,
-    paternallastname,
-    maternallastname,
+    paternalLastName,
+    maternalLastName,
     email,
     phone,
     address,
