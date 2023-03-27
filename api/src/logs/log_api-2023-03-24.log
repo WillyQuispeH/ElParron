@@ -80,3 +80,6 @@
 {"level":"info","message":{"body":{"email":"willypruebas6@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-23 21:02:03"}
 {"level":"info","message":{"body":{"address":"Rivas 820","district":"Santiago","email":"willypruebas6@gmail.com","maternalLastName":"quispe huamani","name":"willy sand","password":"957902342","paternalLastName":"quispe","phone":"982597210","rut":"95.790.234-8"},"method":"POST","params":"","query":"","url":"/api/user/create"},"timestamp":"2023-03-23 21:02:42"}
 {"level":"info","message":{"body":{"email":"willypruebas6@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-23 21:03:01"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/user/getAll"},"timestamp":"2023-03-24 17:05:20"}
+{"level":"error","message":{"error":"syntax error at or near \"RETURNING\"","model":"user/getAll"},"timestamp":"2023-03-24 17:05:20"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/user/getAll"},"timestamp":"2023-03-24 17:05:50"}

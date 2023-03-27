@@ -9,7 +9,7 @@ import useUser from "@/store/hooks";
 const Welcome = () => {
 
   const {user} = useUser();
-  return (
+  return (    
       <Column gap="20px">
         <Logo width="436px" height="305px" />
         <Text text={"Bienvenido: " + user.name+" " + user.paternalLastName +" "+ user.maternalLastName} />

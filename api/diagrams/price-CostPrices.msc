@@ -1,0 +1,15 @@
+msc{
+  priceRoute [label=" Price route"],
+  priceController [label="User Controller"],
+  priceModel [label="User Model"],
+  database [label="Database"];
+
+  priceRoute >> priceController [label="getCostPrices"];
+  priceController >> priceModel [label ="getCostPrices"];
+  priceModel >> database [label ="query: SELECT ..."];
+  database >> database [label="SELECT ..."];
+  database >> priceModel [label="Data"];
+  priceModel >> priceController [label="Data"];
+  priceController >> priceRoute [label="Data"];
+}
+

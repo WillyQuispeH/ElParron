@@ -5,7 +5,10 @@ import { hashPassword, passwordCompare } from "../util/password";
 
 const getAll: any = async () => {
   try {
-    const result = await pool.query("SELECT id, person_id, hash FROM app.user");
+    const result = await pool.query(
+      `SELECT u.id  , person_id,rut, name, paternallastname, maternallastname,email,phone,address,district
+        FROM app."user" u 
+          INNER JOIN app.person p  ON p.id  = u.person_id;`);
     return { sucess: true, data: result.rows, error: null };
   } catch (e) {
     return { sucess: false, data: null, error: (e as Error).message };

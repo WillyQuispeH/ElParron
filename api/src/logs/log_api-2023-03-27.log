@@ -1,0 +1,23 @@
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-26 22:20:53"}
+{"level":"error","message":{"error":"relation \"precio\" does not exist","model":"user/getAll"},"timestamp":"2023-03-26 22:20:54"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-26 22:37:00"}
+{"level":"error","message":{"error":"too many connections for role \"ajeianeg\"","model":"price/getCostPrices"},"timestamp":"2023-03-26 22:37:00"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-26 22:37:16"}
+{"level":"error","message":{"error":"relation \"precio\" does not exist","model":"price/getCostPrices"},"timestamp":"2023-03-26 22:37:16"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getPublicPrices"},"timestamp":"2023-03-26 22:37:44"}
+{"level":"error","message":{"error":"relation \"preciopublico\" does not exist","model":"price/getPublicPrices"},"timestamp":"2023-03-26 22:37:45"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-26 22:41:28"}
+{"level":"error","message":{"error":"relation \"precio\" does not exist","model":"price/getCostPrices"},"timestamp":"2023-03-26 22:41:29"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-26 22:41:35"}
+{"level":"error","message":{"error":"relation \"precio\" does not exist","model":"price/getCostPrices"},"timestamp":"2023-03-26 22:41:35"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-26 22:48:06"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getPublicPrices"},"timestamp":"2023-03-26 22:48:28"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-26 23:33:29"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getPublicPrices"},"timestamp":"2023-03-26 23:37:59"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getPublicPrices"},"timestamp":"2023-03-26 23:39:33"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-26 23:39:46"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getPublicPrices"},"timestamp":"2023-03-26 23:40:36"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-26 23:51:29"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getPublicPrices"},"timestamp":"2023-03-26 23:51:33"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getPublicPrices"},"timestamp":"2023-03-26 23:51:47"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-26 23:51:49"}

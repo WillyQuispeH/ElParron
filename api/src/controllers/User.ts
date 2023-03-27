@@ -8,7 +8,7 @@ import { emailSender } from "../util/email";
 
 const getAll = async (req: any, res: any) => {
   const result = await UserModel.getAll();
-console.log(result.sucess)
+
   if (!result.sucess) {
     createLogger.error({
       model: "user/getAll",
@@ -104,7 +104,7 @@ const assignPassword = async (req: any, res: any) => {
   if (!resultPerson.data) {
     res.status(200).json({ sucess: false, data: null, error: false });
     return;
-  };
+  }
 
   const resultUser = await UserModel.getById(id);
 

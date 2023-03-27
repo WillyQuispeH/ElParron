@@ -32,6 +32,7 @@ class App {
     this.server.use("/api/user", auth, reqLogger, routes.UserRouter);
     this.server.use("/api/order", auth, reqLogger, routes.OrderRouter);
     this.server.use("/api/person", auth, reqLogger, routes.PersonRouter);
+    this.server.use("/api/price", auth, reqLogger, routes.PriceRouter)
   }
 }
 

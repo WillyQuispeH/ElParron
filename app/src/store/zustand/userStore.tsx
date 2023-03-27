@@ -55,14 +55,16 @@ export const userStore = create<userState>((set, get) => ({
         isError: false,
         error: "",
       }));
+
       const { data } = await apiInstance.get("/user/getAll");
+
       set((state) => ({
         ...state,
+        list: data,
         isLoading: false,
         isError: false,
         error: "",
       }));
-      set((state) => ({ ...state, list: data }));
     } catch (e) {
       set((state) => ({
         ...state,
@@ -91,6 +93,7 @@ export const userStore = create<userState>((set, get) => ({
         isError: false,
         error: "",
       }));
+
       const { data } = await apiInstance.post("/user/create", {
         rut,
         name,
@@ -102,13 +105,14 @@ export const userStore = create<userState>((set, get) => ({
         district,
         password,
       });
+
       set((state) => ({
         ...state,
+        user: data.data,
         isLoading: false,
         isError: false,
         error: "",
       }));
-      set((state) => ({ ...state, user: data.data }));
     } catch (e) {
       set((state) => ({
         ...state,
@@ -127,17 +131,19 @@ export const userStore = create<userState>((set, get) => ({
         isError: false,
         error: "",
       }));
+
       const { data } = await apiInstance.put("/user/assignPassword", {
         id,
         password,
       });
+
       set((state) => ({
         ...state,
+        user: data,
         isLoading: false,
         isError: false,
         error: "",
       }));
-      set((state) => ({ ...state, user: data }));
     } catch (e) {
       set((state) => ({
         ...state,
@@ -156,19 +162,27 @@ export const userStore = create<userState>((set, get) => ({
         isError: false,
         error: "",
       }));
+
       const { data } = await apiInstance.post("/user/validate", {
         email,
         password,
       });
-      set((state) => ({
-        ...state,
-        isLoading: false,
-        isError: false,
-        error: "",
-      }));
+
       data.sucess
-        ? set((state) => ({ ...state, user: data.data }))
-        : set((state) => ({ ...state, user: initData }));
+        ? set((state) => ({
+            ...state,
+            user: data.data,
+            isLoading: false,
+            isError: false,
+            error: "",
+          }))
+        : set((state) => ({
+            ...state,
+            user: initData,
+            isLoading: false,
+            isError: false,
+            error: "",
+          }));
     } catch (e) {
       set((state) => ({
         ...state,
@@ -187,9 +201,11 @@ export const userStore = create<userState>((set, get) => ({
         isError: false,
         error: "",
       }));
+
       const { data } = await apiInstance.post("user/recoveryPassword", {
         email,
       });
+
       set((state) => ({
         ...state,
         isLoading: false,
