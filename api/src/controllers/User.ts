@@ -15,7 +15,7 @@ const getAll = async (req: any, res: any) => {
       error: result.error,
     });
 
-    res.status(500).json(result.error);
+    res.status(500).json({ sucess: false, data: null, error: result.error });
     return;
   }
 
@@ -31,6 +31,7 @@ const getById = async (req: any, res: any) => {
       model: "user/getById",
       error: result.error,
     });
+    res.status(500).json({ sucess: false, data: null, error: result.error });
   }
   res.status(200).json({ sucess: true, data: result.data, error: false });
 };
@@ -76,7 +77,7 @@ const create = async (req: any, res: any) => {
       error: resultUser.error,
     });
 
-    res.status(500).json(resultUser.error);
+    res.status(500).json({ sucess: false, data: null, error: resultUser.error });
     return;
   }
 
@@ -115,7 +116,7 @@ const assignPassword = async (req: any, res: any) => {
       error: result.error,
     });
 
-    res.status(500).json(result.error);
+    res.status(500).json({ sucess: false, data: null, error: result.error });
     return;
   }
 
@@ -146,7 +147,7 @@ const validate = async (req: any, res: any) => {
       error: resultPerson.error,
     });
 
-    res.status(500).json(resultPerson.error);
+    res.status(500).json({ sucess: false, data: null, error: resultPerson.error });
     return;
   }
 
@@ -164,7 +165,7 @@ const validate = async (req: any, res: any) => {
       error: resultPerson.error,
     });
 
-    res.status(500).json(isValid.error);
+    res.status(500).json({ sucess: false, data: null, error: isValid.error });
     return;
   }
 
@@ -199,7 +200,7 @@ const recoveryPassword = async (req: any, res: any) => {
       error: resultPerson.error,
     });
 
-    res.status(500).json(resultPerson.error);
+    res.status(500).json({ sucess: false, data: null, error: resultPerson.error });
     return;
   }
 
@@ -221,7 +222,7 @@ const recoveryPassword = async (req: any, res: any) => {
       error: resulAssingPassword.error,
     });
 
-    res.status(500).json(resulAssingPassword.error);
+    res.status(500).json({ sucess: false, data: null, error: resulAssingPassword.error });
     return;
   }
 

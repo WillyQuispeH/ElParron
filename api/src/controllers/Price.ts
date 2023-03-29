@@ -10,7 +10,7 @@ const getCostPrices = async (req: any, res: any) => {
       model: "price/getCostPrices",
       error: result.error,
     });
-    res.status(500).json(result.error);
+    res.status(500).json({ sucess: false, data: null, error: result.error });
     return;
   }
 
@@ -25,7 +25,7 @@ const getPublicPrices = async (req: any, res: any) => {
       model: "price/getPublicPrices",
       error: result.error,
     });
-    res.status(500).json(result.error);
+    res.status(500).json({ sucess: false, data: null, error: result.error });
     return;
   }
 

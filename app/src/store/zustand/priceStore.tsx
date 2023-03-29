@@ -40,7 +40,7 @@ export const priceStore = create<priceState>((set, get) => ({
         isError: false,
         error: "",
       }));
-    } catch (e) {
+    } catch (e: any) {
       set((state) => ({
         ...state,
         isLoading: false,
@@ -60,7 +60,6 @@ export const priceStore = create<priceState>((set, get) => ({
       }));
 
       const { data } = await apiInstance.get("/price/getPublicPrices");
-
       set((state) => ({
         ...state,
         PublicPrices: data,
@@ -68,7 +67,6 @@ export const priceStore = create<priceState>((set, get) => ({
         isError: false,
         error: "",
       }));
-
     } catch (e) {
       set((state) => ({
         ...state,
@@ -78,5 +76,4 @@ export const priceStore = create<priceState>((set, get) => ({
       }));
     }
   },
-  
 }));

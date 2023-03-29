@@ -11,7 +11,7 @@ import Link from "@/components/ui/Link";
 import Logo from "@/components/ui/Logo";
 
 import { regexEmail } from "@/util/regEx";
-
+import Message from "@/components/ui/Message";
 
 const Login = () => {
   const inicialForm = {
@@ -20,7 +20,7 @@ const Login = () => {
   };
 
   const router = useRouter();
-  const {user, validateUser } = useUser();
+  const { errorUser, isErrorUser, validateUser } = useUser();
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [form, setForm] = useState(inicialForm);
 
@@ -42,11 +42,15 @@ const Login = () => {
     validateUser(credentials.email, credentials.password);
     router.push("/welcome");
   };
- 
- 
 
   return (
     <Screen>
+      {isErrorUser ? (
+        <Message
+          msg={`${errorUser} Por favor contactar con el administrador`}
+          background="#dc3545"
+        />
+      ) : null}
       <Column gap="65px">
         <Logo width="300px" height="205px" />
         <Column gap="28px">

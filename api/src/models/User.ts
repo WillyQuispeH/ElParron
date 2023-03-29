@@ -62,7 +62,7 @@ const assignPassword: any = async (id: string, password: string) => {
 const validate: any = async (id: string, password: string) => {
   try {
     const result = await pool.query(
-      `SELECT id, person_id, hash
+      `SELECT id, person_id, ash
         FROM app.user
           WHERE person_id = $1`,
       [id]

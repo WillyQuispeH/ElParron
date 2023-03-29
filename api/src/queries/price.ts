@@ -1,4 +1,4 @@
-export const _getCostPrices = `select	max(tam.id) as tamano_id,
+export const _getCostPrices = `elect	max(tam.id) as tamano_id,
 concat('Torta', ' ', '#', tam.num, case when pre.diet = 1 then ' Diet' else '' end, case when pre.cuadrada = 1 then ' Cuadrada' else '' end, case when pre.masaTipo_id = 4 then ' Panqueque' else '' end) as torta,
 max(pre.costo) as costo,
 max(pre.venta) as venta

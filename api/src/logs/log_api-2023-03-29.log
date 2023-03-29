@@ -1,0 +1,129 @@
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-28 21:19:43"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 21:24:23"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 21:25:31"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 21:25:31"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 21:26:58"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 21:26:59"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:28:39"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:28:40"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getPublicPrices"},"timestamp":"2023-03-28 22:28:45"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:29:55"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:29:56"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:30:47"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:30:48"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:31:52"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:31:52"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:32:09"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:32:10"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:33:47"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:33:47"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:39:28"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:39:28"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:39:41"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:39:42"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:39:58"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:39:58"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:40:13"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:40:13"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:45:17"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:45:18"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:45:44"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:45:45"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:55:46"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:55:47"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:56:01"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:56:02"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 22:56:12"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 22:56:13"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-28 23:00:04"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:00:10"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:00:10"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:01:30"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:01:31"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:02:10"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:02:10"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:02:14"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:02:15"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:04:12"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:04:12"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:18:28"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:18:28"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:21:22"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:21:23"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-28 23:23:33"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:23:37"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:23:37"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:23:59"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:23:59"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:24:01"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:24:02"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:24:03"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:24:03"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:25:40"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:25:41"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:25:43"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:25:43"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:26:03"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:26:04"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getPublicPrices"},"timestamp":"2023-03-28 23:26:41"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getPublicPrices"},"timestamp":"2023-03-28 23:26:45"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:28:05"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:28:06"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-28 23:33:49"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-28 23:33:50"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-28 23:34:08"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-28 23:34:10"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-28 23:38:04"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-28 23:38:05"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-28 23:39:52"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:40:00"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:40:00"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:47:47"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:47:50"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:47:50"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:47:51"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:47:54"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:47:54"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:47:55"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:47:57"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-28 23:48:17"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-28 23:48:18"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-29 00:00:46"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-29 00:00:47"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-29 00:02:39"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-29 00:02:40"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-29 00:05:11"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-29 00:05:12"}
+{"level":"info","message":{"body":"","method":"GET","params":{},"query":{},"url":"/api/price/getCostPrices"},"timestamp":"2023-03-29 00:05:14"}
+{"level":"error","message":{"error":"syntax error at or near \"elect\"","model":"price/getCostPrices"},"timestamp":"2023-03-29 00:05:14"}
+{"level":"info","message":{"body":{"email":"","password":""},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:06:03"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:06:12"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:07:10"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-29 00:07:11"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:08:05"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-29 00:08:05"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:09:48"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-29 00:09:49"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:11:46"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-29 00:11:47"}
+{"level":"info","message":{"body":{"email":"","password":""},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:11:55"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:12:02"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-29 00:12:03"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:12:10"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-29 00:12:10"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:12:32"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-29 00:12:33"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:14:53"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-29 00:14:53"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:14:56"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-29 00:14:56"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:15:03"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-29 00:15:04"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:15:12"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-29 00:15:13"}
+{"level":"info","message":{"body":{"email":"","password":""},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:15:17"}
+{"level":"info","message":{"body":{"email":"","password":""},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:15:19"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:18:17"}
+{"level":"info","message":{"body":{"email":"","password":""},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:20:19"}
+{"level":"info","message":{"body":{"email":"willyabadquispehuamani@gmail.com","password":"957902342"},"method":"POST","params":"","query":"","url":"/api/user/validate"},"timestamp":"2023-03-29 00:20:27"}
+{"level":"error","message":{"error":false,"model":"user/validate"},"timestamp":"2023-03-29 00:20:27"}

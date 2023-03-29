@@ -13,7 +13,7 @@ const getByEmail = async (req: any, res: any) => {
       error: result.error,
     });
 
-    res.status(500).json(result.error);
+    res.status(500).json({ sucess: false, data: null, error: result.error });
     return;
   }
   if (!result.data) {
@@ -33,7 +33,7 @@ const getById = async (req: any, res: any) => {
       error: result.error,
     });
 
-    res.status(500).json(result.error);
+    res.status(500).json({ sucess: false, data: null, error: result.error });
     return;
   }
 
@@ -50,7 +50,7 @@ const getByRut = async (req: any, res: any) => {
       error: result.error,
     });
 
-    res.status(500).json(result.error);
+    res.status(500).json({ sucess: false, data: null, error: result.error });
     return;
   }
 
@@ -65,7 +65,7 @@ const getAll = async (req: any, res: any) => {
       error: resultPerson.error,
     });
 
-    res.status(500).json(resultPerson.error);
+    res.status(500).json({ sucess: false, data: null, error: resultPerson.error });
     return;
   }
   const resultUser = await UserModel.getById(resultPerson.data.id);
@@ -102,7 +102,7 @@ const create = async (req: any, res: any) => {
       error: result.error,
     });
 
-    res.status(500).json(result.error);
+    res.status(500).json({ sucess: false, data: null, error: result.error });
     return;
   }
 
@@ -139,7 +139,7 @@ const update = async (req: any, res: any) => {
       error: result.error,
     });
 
-    res.status(500).json(result.error);
+    res.status(500).json({ sucess: false, data: null, error: result.error });
     return;
   }
 
@@ -156,7 +156,7 @@ const deleteById = async (req: any, res: any) => {
       error: result.error,
     });
 
-    res.status(500).json(result.error);
+    res.status(500).json({ sucess: false, data: null, error: result.error });
     return;
   }
 
